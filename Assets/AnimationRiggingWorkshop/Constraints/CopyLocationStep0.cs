@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
-using UnityEngine.Experimental.Animations;
+
 using Unity.Burst;
 using Unity.Mathematics;
 
@@ -14,9 +14,9 @@ public struct CopyLocationStep0Job : IWeightedAnimationJob
 
     public FloatProperty jobWeight { get; set; }
 
-    public void ProcessRootMotion(AnimationStream stream) { }
+    public void ProcessRootMotion(UnityEngine.Animations.AnimationStream stream) { }
 
-    public void ProcessAnimation(AnimationStream stream)
+    public void ProcessAnimation(UnityEngine.Animations.AnimationStream stream)
     {
         float w = jobWeight.Get(stream);
         if (w > 0f)
